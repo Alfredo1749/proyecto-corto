@@ -1,0 +1,83 @@
+# Reporte Técnico – Calculadora de Ahorros
+
+Este documento describe la estructura técnica del proyecto **Calculadora de Ahorros**, desarrollado en Python.  
+El objetivo del proyecto es permitir al usuario calcular su ahorro mensual y proyectar los resultados a futuro, considerando la tasa de interés anual.
+
+El proyecto consiste en un único archivo principal: `calculadora.py`.  
+Dentro de este archivo, el código se organiza en **funciones** para separar la lógica y mantenerlo modular.
+
+1. **`calcular_sin_interes(ahorro_mensual, años)`**
+   - Recibe como parámetros el ahorro mensual y el número de años.
+   - Calcula el monto total ahorrado sin considerar intereses.
+   - Retorna el total acumulado.
+
+2. **`calcular_con_interes(ahorro_mensual, tasa_anual, años)`**
+   - Recibe como parámetros el ahorro mensual, la tasa anual y los años.
+   - Calcula el ahorro con **interés compuesto mensual**.
+   - Si la tasa es 0, llama a `calcular_sin_interes` para evitar errores.
+   - Retorna el total acumulado con intereses.
+
+3. **`menu()`**
+   - Función principal que controla la **interacción con el usuario**.
+   - Muestra un menú con opciones: calcular plan o salir.
+   - Solicita y valida los datos ingresados por el usuario:
+     - Nombre
+     - Ingreso mensual
+     - Ahorro mensual
+     - Tasa de interés anual
+     - Número de años
+   - Llama a las funciones de cálculo y muestra los resultados de manera formateada.
+   - Contiene validaciones para asegurar que los datos sean correctos y consistentes.
+   - Incluye advertencias cuando el ahorro mensual es muy alto respecto al ingreso.
+
+---
+
+1. El programa inicia ejecutando `menu()`.
+2. El usuario selecciona la opción deseada.
+3. Si selecciona **calcular plan**, se solicita toda la información necesaria.
+4. El programa valida cada dato:
+   - Números positivos
+   - Ahorro menor o igual al ingreso
+   - Confirmación de continuar
+5. Se realizan los cálculos:
+   - `sin_interes = calcular_sin_interes(...)`
+   - `con_interes = calcular_con_interes(...)`
+6. Se muestra un **resumen completo** del ahorro.
+7. El usuario puede repetir el cálculo o salir del programa.
+
+---
+
+
+- Se utilizan **bucles `while`** para asegurar que los datos ingresados sean válidos.
+- Se emplea **`try/except`** para capturar errores de tipo de dato (`ValueError`) y evitar que el programa falle.
+- Se incluyen advertencias informativas para evitar decisiones financieras poco realistas (ahorrar más del 35% del ingreso).
+
+---
+
+
+- **Separación de lógica y presentación**: Las funciones de cálculo (`calcular_sin_interes` y `calcular_con_interes`) no interactúan directamente con el usuario. Esto facilita su reutilización en otros proyectos.
+- **Función de menú**: Se encarga únicamente de la interacción y visualización.
+- **Validaciones**: Mejora la robustez del programa y previene errores durante la ejecución.
+- **Comentarios claros**: Explican cada sección de manera sencilla.
+
+---
+
+1. **Modelador matemático (fórmulas)**  dan y pablo
+   - Diseñó y validó las fórmulas para calcular ahorro sin interés y con interés compuesto.
+
+2. **Desarrollador de interfaz y flujo**  Jhonatan
+   - Implementó la función `menu()`, controlando la interacción del usuario y el flujo del programa.
+
+3. **Tester / validador de cálculos**  Cristian
+   - Verificó que los cálculos fueran correctos con diferentes casos de prueba y escenarios reales.
+
+4. **Documentador técnico** Hervert
+   - Elaboró la documentación del proyecto, incluyendo README, archivo de ayuda y reporte técnico.
+
+---
+
+
+- El proyecto está estructurado de forma **modular, clara y fácil de mantener**.
+- La separación de funciones permite ampliar el proyecto, por ejemplo, agregando nuevos tipos de interés o planes de ahorro.
+- Las validaciones y advertencias aseguran que el usuario tenga una experiencia segura y confiable.
+- La asignación de roles permitió que cada parte del proyecto fuera desarrollada y validada de manera eficiente.
