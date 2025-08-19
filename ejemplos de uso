@@ -1,0 +1,33 @@
+# Calculadora de Ahorros
+
+## Descripción del proyecto
+Este proyecto es una **Calculadora Financiera de Ahorros** desarrollada en Python.  
+Permite al usuario calcular cuánto dinero puede ahorrar en un determinado período de tiempo, considerando **ahorro mensual**, **años de ahorro** y **tasa de interés anual**.  
+Además, muestra un **resumen de ahorro**, incluyendo la ganancia por intereses.
+
+---
+
+## Requisitos para usar el programa
+Antes de ejecutar la calculadora, asegúrate de tener lo siguiente instalado:
+
+1. **Python 3**  
+   - Puedes descargarlo desde [https://www.python.org/downloads/](https://www.python.org/downloads/).  
+   - Verifica la instalación ejecutando en la terminal:
+     ```bash
+     python --version
+     ```
+2. **Visual Studio Code (opcional, recomendado)**  
+   - Un editor de código que facilita abrir, modificar y ejecutar scripts Python.  
+   - Descárgalo desde [https://code.visualstudio.com/](https://code.visualstudio.com/).
+
+3. **Terminal o consola**  
+   - En Windows: CMD, PowerShell o Git Bash.  
+   - En macOS/Linux: Terminal.
+
+---
+
+## Instrucciones de uso
+1. Abre la terminal o consola en la carpeta donde se encuentra `calculadora.py`.
+2. Ejecuta el programa con el comando:
+```bash
+python calculadora.py
